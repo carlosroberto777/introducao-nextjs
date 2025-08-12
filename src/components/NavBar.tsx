@@ -17,12 +17,11 @@ export default function NavBar({links}:NavBarProps) {
                     {/* Logo */}
                     <div className="flex items-center">
                         <Image
-                            src="/nextjs-icon.svg"
+                            src="/next.svg"
                             alt="logo nextjs"
-                            width={40}
-                            height={40}
+                            width={100}
+                            height={80}
                         />
-                        <span className="ml-2">NextApp</span>
                     </div>
 
                     {/* Links */}

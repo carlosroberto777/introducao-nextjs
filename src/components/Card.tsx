@@ -1,25 +1,29 @@
+import Image from "next/image"
 
-interface cardPorps {
-    title: string,
-    description: string,
-    icon: string
+type CardProps = {
+    title: string
+    description: string
+    imageUrl: string
+    category: string
 }
 
-export function Card({ title, description, icon }: cardPorps) {
+export default function Card({title, description, imageUrl, category} : CardProps) {
     return (
+        <div className=" p-9 m-5 bg-blue-400 size-2/6 rounded-2xl transform transition duration-300 hover:scale-110 hover:bg-blue-500 cursor-pointer">
+            <div className="mb-4"> 
+                <Image 
+                alt="image"
+                src={imageUrl}
+                width={50}
+                height={50}/>
+            </div>
 
-        <div className="
-        bg-violet-200 
-        p-6 rounded-xl 
-        hover:shadow-md transition duration-300"
-        >
-            <div className="text-4xl mb-4">{icon}</div>
-            <h3 className="
-            text-xl font-semibold text-gray-800 mb-2">
-                {title}
-            </h3>
-            <p className="text-gray-600">{description}</p>
+            <span className="inline-block mb-2 px-3 py-1 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                {category}
+            </span>
 
+            <h2 className="text-2xl font-bold">{title}</h2>                
+            <p className="font-extralight">{description}</p>
         </div>
     )
 }

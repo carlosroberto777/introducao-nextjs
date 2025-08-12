@@ -1,6 +1,6 @@
-import { Card } from "@/components/Card";
+import  Card  from "@/components/Card1";
 import NavBar from "@/components/NavBar";
-// import PlaceForm from "@/components/PlaceForm";
+import PlaceForm from "@/components/PlaceForm";
 
 
 
@@ -12,8 +12,8 @@ export default function Home() {
       <NavBar links={
         [
           { label: 'Inicio', href: '/' },
-          { label: 'Sobre Nós', href: '/about' },
-          { label: 'Produtos', href: '/product' }
+          { label: 'Mapa', href: '/map' },
+          { label: 'Sobre', href: '/about' }
         ]
       } />
 
